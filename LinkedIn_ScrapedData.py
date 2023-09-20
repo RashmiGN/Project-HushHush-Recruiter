@@ -15,13 +15,6 @@ opts = Options()
 
 driver = webdriver.Chrome(options=opts, executable_path=r'C:\\Users\\dell\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe')
 
-# def validate_field(field):
-#     if field:
-#         pass
-#     else:
-#         field='No results'
-#     return field
-
 driver.get('https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin')
 username = driver.find_element(By.ID,'username')
 username.send_keys('teamnarrators@gmail.com')
@@ -198,7 +191,6 @@ def linkedin_scrape_function(chunk,lock):
 threadList = []
 for i in range(len(split_links)):
     t = threading.Thread(target=linkedin_scrape_function, args=[split_links[i],lock])
-#     multiprocessing.Process(tar)
     t.start()
     threadList.append(t)
 # print(threadList)
