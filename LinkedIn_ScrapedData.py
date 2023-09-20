@@ -1,6 +1,5 @@
 import pandas as pd
 import threading
-import multiprocessing
 from parsel import Selector
 from time import sleep
 from selenium import webdriver
