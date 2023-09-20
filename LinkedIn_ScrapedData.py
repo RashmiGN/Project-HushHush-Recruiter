@@ -24,10 +24,10 @@ driver = webdriver.Chrome(options=opts, executable_path=r'C:\\Users\\dell\\Downl
 
 driver.get('https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin')
 username = driver.find_element(By.ID,'username')
-username.send_keys('rashmignaik231@gmail.com')
+username.send_keys('teamnarrators@gmail.com')
 sleep(0.5)
 password = driver.find_element(By.ID,'password')
-password.send_keys('Rashmi@23')
+password.send_keys('Teamnarrators@2023')
 sleep(0.5)
 sign_in_button = driver.find_element(By.XPATH,'//*[@type="submit"]')
 sign_in_button.click()
