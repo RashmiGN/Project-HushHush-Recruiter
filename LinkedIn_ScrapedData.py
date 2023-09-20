@@ -136,12 +136,21 @@ for x in range(0, 300, 10):
     # Wait for a short interval before the next iteration
     sleep(20)
 # len(links)
-
+# print(links) 
 # removing duplicates from the urls list and filtering the unwanted urls
 data = list(set(links))
 filtered_links = [l for l in data if "translate.google.com/translate?" not in l]
 # print(filtered_links)
-# print(links)    
+
+# list_length = len(filtered_links)
+# indexing_list =  list_length // 6
+# list1 = filtered_links[:indexing_list]
+# list2 = filtered_links[indexing_list:2 * indexing_list]
+# list3 = filtered_links[2 * indexing_list:3 * indexing_list]
+# list4 = filtered_links[3 * indexing_list:4 * indexing_list]
+# list5 = filtered_links[4 * indexing_list:5 * indexing_list]
+# list6 = filtered_links[5 * indexing_list:]   
+
 split_links= [filtered_links[x:x+50] for x in range(0,len(filtered_links), 50)]
 
 
