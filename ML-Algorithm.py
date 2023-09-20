@@ -45,7 +45,7 @@ for i in range(0,4):
 
     # fitting the k means algorithm on scaled data
     kmeans.fit(data)
-
+    
     df['Cluster'] = kmeans.labels_
     cluster_labels= kmeans.labels_
 
